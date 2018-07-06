@@ -424,7 +424,7 @@ struct RCTInstanceCallback : public InstanceCallback {
   } else {
     [RCTJavaScriptLoader loadBundleAtURL:self.bundleURL onProgress:onProgress onComplete:^(NSError *error, RCTSource *source) {
       if (error) {
-        RCTLogError(@"Failed to load bundle(%@) with error:(%@ %@)", self.bundleURL, error.localizedDescription, error.localizedFailureReason);
+        RCTLogError(@"Failed to load bundle from %@. Error: %@", self.bundleURL, error.localizedDescription);
         return;
       }
       onSourceLoad(error, source);
