@@ -40,7 +40,7 @@ const HMRClient = {
     const hmrClient = new MetroHMRClient(wsUrl);
 
     hmrClient.on('connection-error', e => {
-      let error = `Hot loading isn't working because it cannot connect to the development server.
+      let error = `Hot reloading isn't working because it cannot connect to the development server.
 
 Try the following to fix the issue:
 - Ensure that the packager server is running and available on the same network`;
